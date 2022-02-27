@@ -1,0 +1,16 @@
+.search-btn{
+    border: 1px solid $border-col;
+    border-radius:  0 5px 5px 0;
+    width: 40px;
+    height: 36px;
+    padding: 2px 5px;
+}
+
+.sendmail-btn{
+    border: 1px solid $border-col;
+    background-color: $primary;
+    color:$bg-color;
+    border-radius:  0 5px 5px 0;
+    height: 36px;
+    padding: 2px 5px;
+}

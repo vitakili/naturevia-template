@@ -1,0 +1,196 @@
+.sidebar-card{
+    background-color: $secondary;
+    background-clip: content-box;
+    padding: 0 2em;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.sidebar-title{
+    margin-bottom:0;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid $border-col;
+    padding: .6em;
+}
+
+.sidebar-list{
+    // padding:0 1em;
+    padding-left: 0;
+    li{
+        // border-bottom: 1px solid $border-col;
+        position:relative;
+        &::before{
+            content:"";
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:-1px;
+            margin: auto;
+            height: 1px;
+            width: 90%;
+            border-bottom: 1px solid $border-col;
+        }
+        &:last-child{
+            // border:none;
+            &::before{
+                border-bottom:none;
+            }
+        }
+        a{
+            padding: .6em;
+            display: block;
+            &:hover{
+                background-color: $seconary-hov;
+                color:$bg-color;
+            }
+        }
+        .active-sidebar{
+            background-color: $primary;
+            color:$bg-color;
+        }
+    }
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+    // background-color: $bg-color;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div {
+    padding: 0px 20px;
+     cursor: pointer;
+    user-select: none;
+  }
+  .select-selected{
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: $bg-color;
+    top: 100%;
+    width: 200px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.2);
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected::before {
+    content: "\2713";
+    color:$primary;
+  }
+
+  .checkbox-filter { filter: hue-rotate(240deg) }
+
+  input[type=checkbox], img.icon-list {
+    height: 20px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+  }
+  img.icon-list{
+     float:right;
+     margin:0 .6em;
+     &:hover{
+         filter:brightness(0) invert(1) drop-shadow($box-shadow);
+     }
+  }
+
+  .product-selection{
+    background-color: $secondary;
+    padding: 1em 2em;
+    max-height: 55px;
+    margin-bottom: 3.2vh;
+  }
+
+  .product-list{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media screen and(max-width:1024px){
+    .product-list{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+  .product-item{
+     border: solid 1px $secondary; 
+     border-radius: 1%;
+    //  margin:10px;
+     padding: .6em;
+     &:hover{
+        box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.4);
+        border:none;
+        transition: all 0.3s;
+        .cart{
+            background: $primary;
+        }
+     }
+     >img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+     }
+  }
+
+  .club-price{
+      color: $primary;
+      strong{
+          font-size: 1.2em;
+      }
+  }
+
+  .product-title{
+      text-decoration: underline;
+      font-weight: bold;
+  }
+
+  .cart{
+      background: transparent linear-gradient(135deg, #94BF13 0%, #3BA632 100%) 0% 0% no-repeat padding-box;
+      margin: auto;
+      border-radius: 10%;
+      img{
+          filter: $filter;
+          padding: .6em;
+        }
+  }
+
+  .prices > p{
+      margin-bottom:0;
+  }
