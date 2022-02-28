@@ -55,6 +55,14 @@ a{
     flex: 1 1 10em;
 }
 
+.grid-ish-stacked {
+    display:flex;
+    flex-wrap: wrap;
+}
+.grid-ish-stacked > * {
+    flex: 1 1 6em;
+}
+
 .content-sidebar{
     display:flex;
     flex-wrap: wrap;
@@ -70,8 +78,9 @@ a{
 
 @media screen and(max-width:1024px){
     .content-sidebar > *:nth-child(1){
-        display:flex;
-        flex:1 100%;
+        // display:flex;
+        // flex:1 100%;
+        display:block;
     }
 }
 

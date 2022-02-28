@@ -26,19 +26,19 @@
                     <img src="img/logo.svg" alt="logo"/>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item-desktop">
                 <div class="searchbar">
                     <input class="search-input" aria-label="Search" placeholder="Vyhledávání">
                     <button class="btn search-btn" type="submit"><img src="img/vyhledavani.png" alt="vyhledavani"/></button>
                 </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item-desktop">
                     <img src="img/user.png" alt="user"/><a class="" href="#">Přihlášení</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item-desktop">
                 <img src="img/kosik.png" alt="kosik"/><a class="" href="#"><strong>1598 Kč</strong></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item-desktop">
                 <ul class="inline-list">
                     <li class="active lang-items"><a href="#"> Cz</a></li>
                     <li class="lang-items"><a href="#">De</a> </li>
@@ -48,7 +48,7 @@
         </ul>
  
     <div class="nav-bg">
-        <ul class="container even-columns">
+        <ul class="container nav-item-desktop even-columns">
             <li class="nav-link">
                <div>
                    <img src="img/hamburger.svg" alt="hamburger"> Eshop
@@ -70,6 +70,31 @@
                 Kontakty
             </li>
         </ul>
+        <ul class="container even-columns">
+            <li class="nav-link-mobile">
+                <div class="nav-mobile-hamburger">
+                    <button class="second-button" type="button">
+                        <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+                      </button>
+                      Menu
+                </div>
+             </li>
+             <li class="nav-link-mobile">
+               <div class="nav-socicons">
+                   <img src="img/user.png" alt="user">
+                   <img src="img/kosik.png" alt="kosik">
+                   <img src="img/vyhledavani.png" alt="vyhledavani">
+               </div>
+            </li>
+            <div class="overlay">
+                <div class="overlay-content">
+                  <a href="#">Klub zdraví</a>
+                  <a href="#">O nás</a>
+                  <a href="#">Aktuality</a>
+                  <a href="#">Kontakty</a>
+                </div>
+            </div>
+        </ul>
     </div>
     </nav>
 </div>
@@ -81,7 +106,9 @@
     <div class="container">
         <div class="content-sidebar">
             <div class="sidebar-card">
-                <h5 class="sidebar-title">Naše produkty</h5>
+                <div class="sidebar-title even-columns">
+                    <h5>Naše produkty</h5><span class="arrow-icon" onclick="mySidebarList()">&#8964;</span>
+                </div>
                 <ul class="sidebar-list">
                     <li><a href="#">Výhodná nabídka a novinky</a></li>
                     <li><a href="#">Brusinky</a></li>
@@ -99,12 +126,14 @@
                 </ul>
             </div>
             <div class="main-content">
-                <h1>LAKTOBACILY A BIFIDOBAKTERIE</h1>
-                <p>
-                    Střevní mikroflóra každého člověka obsahuje probiotické i patogenní bakterie. Z probiotických převládají hlavně laktobacily a bifidobakterie. Probiotika jsou živé mikroorganizmy, které aplikovány v přiměřeném množství příznivě ovlivňují zdravotní stav hostitele. 
-                    <br><br>Všechna probiotika Swiss Natural™ jsou plněna v rostlinných kapslích. Vyberte si z nabídky Swiss Natural® probiotika špičkové kvality pro celou rodinu - od kojenců po seniory.
-                </p>
-                <div class="product-selection even-columns">
+                <div class="product-header">
+                    <h1>LAKTOBACILY A BIFIDOBAKTERIE</h1>
+                    <p>
+                        Střevní mikroflóra každého člověka obsahuje probiotické i patogenní bakterie. Z probiotických převládají hlavně laktobacily a bifidobakterie. Probiotika jsou živé mikroorganizmy, které aplikovány v přiměřeném množství příznivě ovlivňují zdravotní stav hostitele. 
+                        <br><br>Všechna probiotika Swiss Natural™ jsou plněna v rostlinných kapslích. Vyberte si z nabídky Swiss Natural® probiotika špičkové kvality pro celou rodinu - od kojenců po seniory.
+                    </p>
+                </div>
+                <div class="product-selection grid-ish-stacked">
                     <p>21 produktů</p>
                     <div>
                         <input class="checkbox-filter" type="checkbox" name="Skladem" checked>   

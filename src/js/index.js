@@ -1,3 +1,14 @@
+function mySidebarList() {
+  var x = document.querySelector(".sidebar-list");
+  if (x.style.maxHeight === "667px") {
+    // x.style.display = "none";
+    x.style.maxHeight = "0";
+  } else {
+    // x.style.display = "block";
+    x.style.maxHeight = "667px";
+  }
+}
+
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
@@ -76,3 +87,30 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+var btn = document.querySelector('.second-button');
+var navlink = document.querySelector('.nav-link-mobile');
+var overlay = document.querySelector('.overlay');
+  /** Hamburger menu */
+  btn.addEventListener('click', function () {
+
+    document.querySelector('.animated-icon2').classList.toggle('open');
+    navlink.classList.toggle('nav-open-bg');
+    overlay.classList.toggle('overlay-height');
+
+    });
+
+  window.onscroll = function() {myScrollFunction()};
+
+    var navbar = document.querySelector('.nav-bg');
+    var sticky = navbar.offsetTop;
+    
+    function myScrollFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+        overlay.classList.add('stickyoffset');
+      } else {
+        navbar.classList.remove("sticky");
+        overlay.classList.remove('stickyoffset');
+      }
+    }
