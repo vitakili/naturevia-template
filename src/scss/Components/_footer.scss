@@ -1,6 +1,22 @@
+@mixin ftr-title{
+    font-weight: bold;
+    position:relative;
+    text-transform: uppercase;
+    padding: .6em 0;
+    &::before{
+        content:"";
+        position:absolute;
+        left:0;
+        bottom:-1px;
+        height: 1px;
+        width: 30%;
+        border-bottom: 3px solid $primary;
+    }
+}
 footer{
     border-top: 8px solid $ftr-line;
     padding: 2em 0;
+    margin: 4em 0;
     a{
         &:hover{
             color:$primary;
@@ -22,38 +38,53 @@ footer{
     gap: 1rem;
   }
 
-  @media screen and(max-width:1024px){
+
+
+.ftr-title, .ftr-title-info, .ftr-title-products{
+    @include ftr-title;
+}
+
+
+.ftr-caption{
+    margin: 3em auto;
+    text-align: center;
+}
+
+@media screen and(max-width:1024px){
     .ftr-columns{
         grid-template-columns:1fr;
     }
-}
-.ftr-title{
-    font-weight: bold;
-    position:relative;
-    padding: .6em 0;
-    &::before{
-        content:"";
-        position:absolute;
-        left:0;
-        bottom:-1px;
-        height: 1px;
-        width: 30%;
-        border-bottom: 3px solid $primary;
+    .ftr-title-info, .ftr-title-products{
+        padding-left:1em;
+        &::before{
+            content: ">";
+            bottom:auto;
+            color: $seconary-hov;
+            border-bottom:none;
+        }
     }
+    .ftr-hidable{
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+}
+
+.ftr-rotate::before{
+    content: ">";
+    bottom: -30px;
+    color: #94bf13;
+    border-bottom: none;
+    rotate: 90deg;
+    left: -35px;
 }
 
 img.socicon{
     margin:1em;
     height: 30px;
-    aspect-ratio: 1/1;
+    aspect-ratio: initial;
     cursor: pointer;
     &:hover{
         filter:$filterprimary;
     }
-}
-
-.ftr-caption{
-    margin: 3em auto;
-    display:flex;
-    justify-content: center;
 }

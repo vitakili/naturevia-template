@@ -1,13 +1,42 @@
 function mySidebarList() {
-  var x = document.querySelector(".sidebar-list");
-  if (x.style.maxHeight === "667px") {
+  var sidebar = document.querySelector(".sidebar-list");
+  var arrow = document.querySelector(".arrow-icon")
+  if (sidebar.style.maxHeight === "667px") {
     // x.style.display = "none";
-    x.style.maxHeight = "0";
+    sidebar.style.maxHeight = "0";
+    arrow.style.rotate = "0deg";
   } else {
     // x.style.display = "block";
-    x.style.maxHeight = "667px";
+    sidebar.style.maxHeight = "667px";
+    arrow.style.rotate = "180deg";
   }
 }
+
+function myFooterColProducts() {
+  var products = document.getElementById("products");
+  var title = document.querySelector('.ftr-title-products');
+  if (products.style.maxHeight === "667px") {
+    products.style.maxHeight = "0";
+    title.classList.remove("ftr-rotate");
+  } else {
+    products.style.maxHeight = "667px";
+    title.classList.add("ftr-rotate");
+  }
+}
+function myFooterColInfo(){
+
+  var info = document.getElementById('info');
+  var title = document.querySelector('.ftr-title-info');
+  if (info.style.maxHeight === "667px") {
+    info.style.maxHeight = "0";
+    title.classList.remove("ftr-rotate");
+
+  } else {
+    info.style.maxHeight = "667px";
+    title.classList.add("ftr-rotate");
+  }
+}
+
 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
@@ -107,7 +136,7 @@ var overlay = document.querySelector('.overlay');
     
     function myScrollFunction() {
       if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+        navbar.classList.add("sticky");
         overlay.classList.add('stickyoffset');
       } else {
         navbar.classList.remove("sticky");

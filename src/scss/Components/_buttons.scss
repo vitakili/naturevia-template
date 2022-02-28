@@ -1,3 +1,20 @@
+.btn{
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: none;
+}
 .search-btn{
     border: 1px solid $border-col;
     border-radius:  0 5px 5px 0;
@@ -8,9 +25,13 @@
 
 .sendmail-btn{
     border: 1px solid $border-col;
-    background-color: $primary;
+    background: $lingradient;
     color:$bg-color;
     border-radius:  0 5px 5px 0;
     height: 36px;
     padding: 2px 5px;
+    &:hover{
+        color:$bg-color;
+        background: $primary;
+    }
 }
