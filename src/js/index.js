@@ -4,11 +4,11 @@ function mySidebarList() {
   if (sidebar.style.maxHeight === "667px") {
     // x.style.display = "none";
     sidebar.style.maxHeight = "0";
-    arrow.style.rotate = "0deg";
+    arrow.style.transform = "rotate(0deg)";
   } else {
     // x.style.display = "block";
     sidebar.style.maxHeight = "667px";
-    arrow.style.rotate = "180deg";
+    arrow.style.transform = "rotate(180deg)";
   }
 }
 
